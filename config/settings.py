@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bookmark.apps.BookmarkConfig',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'lion_imjonghan',
+        'NAME': 'lion_smh',
         'USER': 'postgres',
         'PASSWORD': 'G=nf_-}EKl',
         'HOST': 'hanslab.org',  # 또는 PostgreSQL 서버의 IP 주소

@@ -10,4 +10,5 @@ class Bookmark(models.Model):
     def __str__(self):
         # return self.title
         # return self.url
-        return self.title+" "+self.url
+        return self.title
+    
