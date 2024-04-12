@@ -38,7 +38,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bookmark.apps.BookmarkConfig',
+<<<<<<< HEAD
     'blog.apps.BlogConfig',
+=======
+    'blog',
+    # 새로 입력
+    'taggit.apps.TaggitAppConfig',
+    'taggit_templatetags2',
+    'photo',
+    'widget_tweaks',
+>>>>>>> upstream/main
 ]
 
 MIDDLEWARE = [
@@ -78,14 +87,30 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
+<<<<<<< HEAD
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'lion_retry',
         'USER': 'postgres',
         'PASSWORD': 'G=nf_-}EKl',
         'HOST': 'hanslab.org',  # 또는 PostgreSQL 서버의 IP 주소
         'PORT': '25432',       # PostgreSQL의 기본 포트 번호
+=======
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR/'db.sqlite3'
+>>>>>>> upstream/main
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'lion_imjonghan',
+#         'USER': 'postgres',
+#         'PASSWORD': 'G=nf_-}EKl',
+#         'HOST': 'hanslab.org',  # 또는 PostgreSQL 서버의 IP 주소
+#         'PORT': '25432',       # PostgreSQL의 기본 포트 번호
+#     }
+# }
 
 
 # Password validation
@@ -133,3 +158,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import os
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # BASE_DIR/'media'
+
+TAGGIT_CASE_INSENSITIVE=True
+TAGGIT_LIMIT=50
+
+# DISQUS 설정
+DISQUS_SHORTNAME = 'lion-django-tutorial-3'
+DISQUS_MY_DOMAIN = 'http://127.0.0.1:8000'
+
+LOGIN_REDIRECT_URL='/'
+# LOGIN_URL
+LOGOUT_REDIRECT_URL='/'

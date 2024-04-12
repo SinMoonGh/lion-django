@@ -8,5 +8,9 @@ app_name = "bookmark"
 
 urlpatterns = [
     path("", views.BookmarkLV.as_view(), name="index"),
+<<<<<<< HEAD
     path('<int:pk>/', views.BookmarkDV.as_view(), name='detail'),
+=======
+    path("<int:pk>/", views.BookmarkDV.as_view(), name="detail"),    
+>>>>>>> upstream/main
 ]
