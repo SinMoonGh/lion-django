@@ -11,8 +11,5 @@ class BookmarkLV(ListView):
     
 class BookmarkDV(DetailView):
     model=Bookmark
-<<<<<<< HEAD
-=======
      # template_name="bookmark/bookmark_detail.html" #appname/model_name_detail.html
      # context_object_name = "object" # object
->>>>>>> upstream/main

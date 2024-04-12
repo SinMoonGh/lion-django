@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-from django.shortcuts import render
-from django.views.generic.list import ListView
-from django.views.generic.detail import DetailView
-from django.views.generic.dates import ArchiveIndexView
-from django.views.generic.dates import YearArchiveView
-from django.views.generic.dates import MonthArchiveView
-from blog.models import Post
-from django.utils import timezone
-
-# Create your views here.
-class PostLV(ListView):
-    model = Post
-    template_name = "blog/post_list.html"
-    context_object_name = 'posts'
-    paginate_by = 1
-
-=======
 from typing import Any
 from django.db.models.query import QuerySet
 from django.http import HttpResponse
@@ -40,15 +22,10 @@ def dummpy_post(request):
         'posts' : objects
     }
     return render(request, "blog/post_all.html", context)
->>>>>>> upstream/main
 
 class PostDV(DetailView):
     model=Post
     template_name="blog/post_detail.html"
-<<<<<<< HEAD
-
-class postArchiveView(ArchiveIndexView):
-=======
     # get_queryset - > get_object
     # def get_object(self):pass
     def get_context_data(self, **kwargs):
@@ -63,29 +40,18 @@ class postArchiveView(ArchiveIndexView):
 
 #--- ArchiveView
 class PostAV(ArchiveIndexView):
->>>>>>> upstream/main
     model = Post
     date_field = 'modify_dt'
     template_name = "blog/post_archive.html"
 
 
-<<<<<<< HEAD
-class postYearArchiveView(YearArchiveView):
-=======
 class PostYAV(YearArchiveView):
->>>>>>> upstream/main
     model = Post
     date_field = 'modify_dt'
     make_object_list = True
     template_name = "blog/post_archive_year.html"
 
 
-<<<<<<< HEAD
-class postMonthArchiveView(MonthArchiveView):
-    model = Post
-    date_field = 'modify_dt'
-    template_name = "blog/post_archive_month.html"
-=======
 
 class PostMAV(MonthArchiveView):
     model = Post
@@ -137,4 +103,3 @@ class SearchFormView(FormView):
         # 페이지에 전달
         return render(self.request, self.template_name, context)
 
->>>>>>> upstream/main

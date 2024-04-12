@@ -4,7 +4,7 @@
 {% block content %}
 <h1>Blog Search</h1>
 <br>
-<form action="."  method="post">
+<form action="." method="post">
     {% csrf_token %}
     <div class="input-group mb-3">
         {{form.as_table}}
@@ -14,12 +14,12 @@
 
 <br><br>
 {% if object_list %}
-    {% for post in object_list %}
-        <h2><a href="{{post.get_absolute_url}}">{{post.title}}</a></h2>
-        {{post.modify_date|date:"Y N d"}}
-        <p>{{post.content}}</p>
-    {% endfor %}    
+{% for post in object_list %}
+<h2><a href="{{post.get_absolute_url}}">{{post.title}}</a></h2>
+{{post.modify_date|date:"Y N d"}}
+<p>{{post.content}}</p>
+{% endfor %}
 {% elif search_term %}
-    <b>Search Word <i>{{search_term}}</i>으로 검색했는데 안나왔어요</b>
+<b>Search Word <i>{{search_term}}</i>으로 검색했는데 안나왔어요</b>
 {% endif %}
 {% endblock %}

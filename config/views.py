@@ -1,9 +1,4 @@
 from django.views.generic import TemplateView
-<<<<<<< HEAD
-
-class HomeView(TemplateView):
-    template_name="home.html"
-=======
 # 신규 내용
 from django.views.generic import CreateView
 from django.contrib.auth.forms import UserCreationForm
@@ -20,4 +15,3 @@ class UserCreateView(CreateView):
 
 class UserCreateDoneTV(TemplateView):
     template_name = 'registration/register_done.html'    
->>>>>>> upstream/main

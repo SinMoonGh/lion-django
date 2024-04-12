@@ -38,16 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bookmark.apps.BookmarkConfig',
-<<<<<<< HEAD
-    'blog.apps.BlogConfig',
-=======
     'blog',
     # 새로 입력
     'taggit.apps.TaggitAppConfig',
     'taggit_templatetags2',
     'photo',
     'widget_tweaks',
->>>>>>> upstream/main
 ]
 
 MIDDLEWARE = [
@@ -87,17 +83,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-<<<<<<< HEAD
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'lion_retry',
-        'USER': 'postgres',
-        'PASSWORD': 'G=nf_-}EKl',
-        'HOST': 'hanslab.org',  # 또는 PostgreSQL 서버의 IP 주소
-        'PORT': '25432',       # PostgreSQL의 기본 포트 번호
-=======
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR/'db.sqlite3'
->>>>>>> upstream/main
     }
 }
 
