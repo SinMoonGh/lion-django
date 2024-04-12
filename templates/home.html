@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}home title{% endblokc%}
+
+{% block extra-style %}
+<style type="text/css">
+    .home-image {
+        background-image: url("{% static 'img/lion.jpg' %}");
+    }
+</style>
+
+{% block content %}
+<div class="home-image">
+    <h2 class="title">장고는 장고합니다.</h2>
+    <h4 class="powered"><i class="fas fa-arrow-circle-right"></i>장고로 만든 호랑이</h4>
+</div>
+
+<h4>content를 집어넣으세요</h4>
+{% endblock %}
+
+{% block footer %}
+<footer class="fixed-bottom bg-info">
+    <div class="text-white font-italic">장고하면 큰 코 다쳐~</div>
+</footer>
+{% endblock %}
